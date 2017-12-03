@@ -1,0 +1,13 @@
+.devices thead td {
+    text-align: center;
+    font-weight: bold;
+}
+
+.devices td {
+    border: 1px solid black;
+    padding: 2px 5px;
+}
+
+.devices {
+    border-collapse: collapse;
+}

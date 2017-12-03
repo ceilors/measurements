@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .devices thead td {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .devices td {
+            border: 1px solid black;
+            padding: 2px 5px;
+        }
+
+        .devices td.numeric {
+            text-align: right;
+        }
+
+        .devices td.check {
+            text-align: center;
+        }
+
+        .devices {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<table class="devices">
+    <thead>
+        <td>Название</td>
+        <td>Тип измерения</td>
+        <td>Тип измерителя</td>
+        <td>ВПИ</td>
+        <td>НПИ</td>
+        <td>Точность</td>
+        <td>В реальном времени</td>
+        <td>Подключение щупа</td>
+    </thead>
+    <tbody>
+    {% for row in result %}
+        <tr>
+        <td>{{ row["name"] }}</td>
+        <td>{{ row["typeMeasuring"] }}</td>
+        <td>{{ row["typeMeasure"] }}</td>
+        <td class="numeric">{{ row["upperRange"] }} {{ row["upperRange_unit"] }}</td>
+        <td class="numeric">{{ row["lowerRange"] }} {{ row["lowerRange_unit"] }}</td>
+        <td class="numeric">{{ row["accuracy"] }} {{ row["accuracy_unit"] }}</td>
+        <td class="check">{% if row["realTimeMode"] == "Yes" %}✓{% else %}×{% endif %}</td>
+        <td class="check">{% if row["probeUsage"] == "Yes" %}✓{% else %}×{% endif %}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
