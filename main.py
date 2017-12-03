@@ -10,7 +10,7 @@ def hello():
 
 @app.route("/shenka/")
 def db():
-    base = "app/base.db"
+    base = "base.db"
     conn = sqlite3.connect(base)
     conn.row_factory = sqlite3.Row
     result = conn.execute("select * from Measuring;")
