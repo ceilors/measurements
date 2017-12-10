@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <link rel="icon" type="../img/png" href="/logo1.png" />
+    <title>Измерители толщины</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
+    <h2>Измерители толщины роговичного слоя глаза</h2>
 <table class="devices">
     <thead>
         <td>Название</td>
         <td>Тип измерения</td>
         <td>Тип измерителя</td>
-        <td>ВПИ</td>
-        <td>НПИ</td>
+        <td>ВПИ&sup1;</td>
+        <td>НПИ&sup2;</td>
         <td>Точность</td>
         <td>В реальном времени</td>
         <td>Подключение щупа</td>
@@ -32,5 +34,15 @@
     {% endfor %}
     </tbody>
 </table>
+    <!--
+    <p>Таблица сформирована с использованием базы данных <em>тут присвоенный после регистрации номер и всякие плюшки-оформлюшки</em></p>
+    -->
+    <p>
+       1 &mdash; Верхний предел измерений<br/>
+       2 &mdash; Нижний предел измерений
+    </p>
+	
+    <p><a target="_blank" href="../boogo.ga" 
+       title="Узнайте больше о других наших проектах">На главную</a></p>
 </body>
 </html>
