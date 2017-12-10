@@ -10,4 +10,14 @@
 
 .devices {
     border-collapse: collapse;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.devices td.numeric {
+    text-align: right;
+}
+
+.devices td.check {
+    text-align: center;
 }

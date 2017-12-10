@@ -2,37 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<link rel="icon" type="../img/png" href="/logo1.png" />
+    <link rel="icon" type="../img/png" href="/logo1.png" />
     <title>Измерители толщины</title>
-    <style>
-        .devices thead td {
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .devices td {
-            border: 1px solid black;
-            padding: 2px 5px;
-        }
-
-        .devices td.numeric {
-            text-align: right;
-        }
-
-        .devices td.check {
-            text-align: center;
-        }
-
-        .devices {
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-        
-        body {
-	        background-color: #d2b48c; 
-	        font-family: sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
     <h2>Измерители толщины роговичного слоя глаза</h2>
@@ -65,9 +37,10 @@
     <!--
     <p>Таблица сформирована с использованием базы данных <em>тут присвоенный после регистрации номер и всякие плюшки-оформлюшки</em></p>
     -->
-    <p>1 &mdash; Верхний предел измерений
-	    <br>
-    2 &mdash; Нижний предел измерений</p>
+    <p>
+       1 &mdash; Верхний предел измерений<br/>
+       2 &mdash; Нижний предел измерений
+    </p>
 	
     <p><a target="_blank" href="../boogo.ga" 
        title="Узнайте больше о других наших проектах">На главную</a></p>
