@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="../img/png" href="/logo1.png" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo1.png') }}" />
     <title>Измерители толщины</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
+    <div class="container">
     <h2>Измерители толщины роговичного слоя глаза</h2>
-<table class="devices">
+    <table class="devices">
     <thead>
         <td>Название</td>
         <td>Тип измерения</td>
@@ -38,11 +39,11 @@
     <p>Таблица сформирована с использованием базы данных <em>тут присвоенный после регистрации номер и всякие плюшки-оформлюшки</em></p>
     -->
     <p>
-       1 &mdash; Верхний предел измерений<br/>
-       2 &mdash; Нижний предел измерений
+       &sup1; &mdash; верхний предел измерений<br/>
+       &sup2; &mdash; нижний предел измерений
     </p>
-	
-    <p><a target="_blank" href="../boogo.ga" 
-       title="Узнайте больше о других наших проектах">На главную</a></p>
+    
+    <p><a href="/" title="Узнайте больше о других наших проектах">На главную</a></p>
+    </div>
 </body>
 </html>

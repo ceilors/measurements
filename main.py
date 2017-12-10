@@ -9,8 +9,8 @@ conn.row_factory = sqlite3.Row
 
 
 @app.route("/")
-def hello():
-    return "Hello World!"
+def index():
+    return render_template("index.html")
 
 
 @app.route("/shenka/")
