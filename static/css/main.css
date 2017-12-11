@@ -1,41 +1,65 @@
-body {
-    font-family: 'Fira Sans', sans-serif;
-    background-color: #fdf6e3;
-    color: rgb(101, 123, 131);
-}
+/**** Solarized    */
+/*    Solarized ****/
+html {
+  background-color: #fdf6e3;
+  color: #657b83;
+  font: 14pt/20pt 'Fira Sans', sans-serif; }
+  html * {
+    color: #657b83; }
+  html h1, html h2, html h3, html h4, html h5, html h6 {
+    color: #586e75;
+    border-color: #657b83;
+    border-bottom-width: 1px; }
+  html a, html a:active, html a:visited {
+    color: #586e75; }
+  html a, html a:active, html a:visited, html code.url {
+    color: #b58900; }
+  html h1, html h2, html h3, html h4, html h5, html h6 {
+    color: #b58900; }
+
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto; }
+
+table {
+  margin-top: 2ex;
+  margin-bottom: 2ex; }
 
 .container {
-    max-width: 1024px;
-    margin: 0 auto;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    text-align: center;
-}
-
-.devices thead td {
-    text-align: center;
-    font-weight: bold;
-}
-
-.devices td {
-    border: 1px solid black;
-    padding: 2px 5px;
-}
+  max-width: 1024px;
+  margin: 0 auto; }
 
 .devices {
-    border-collapse: collapse;
-    margin: 20px auto;
-}
-
-.devices td.numeric {
-    text-align: right;
-}
-
-.devices td.check {
+  font-size: 90%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  border: 1px solid #839496; }
+  .devices td {
+    border-left: 1px solid #839496;
+    padding: 2px 5px; }
+    .devices td.numeric {
+      text-align: right; }
+    .devices td.check {
+      text-align: center; }
+  .devices thead td {
     text-align: center;
-}
+    font-weight: bold;
+    border-bottom: 1px solid #839496; }
+  .devices tr:nth-child(odd) {
+    background: #fdf6e3; }
+  .devices tr:nth-child(even) {
+    background: #eee8d5; }
 
-a {
-    color: rgb(181, 137, 0);
-}
+.footnote {
+  font-size: 80%;
+  position: relative; }
+  .footnote:before {
+    content: "";
+    display: block;
+    width: 10em;
+    top: -.5ex;
+    left: 0;
+    position: absolute;
+    border-bottom: 1px solid black; }
+
+/*# sourceMappingURL=main.css.map */

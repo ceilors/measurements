@@ -1,0 +1,99 @@
+/**** Solarized    */
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+@mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) 
+{
+    background-color:$rebase03;
+    color:$rebase0;
+    * { color:$rebase0; }
+    h1,h2,h3,h4,h5,h6 { color:$rebase1; border-color: $rebase0; border-bottom-width: 1px }
+    a, a:active, a:visited { color: $rebase1; }
+}
+
+@mixin accentize($accent) {
+    a, a:active, a:visited, code.url { color: $accent; }
+    h1,h2,h3,h4,h5,h6 {color:$accent}
+}
+
+/*    Solarized ****/
+
+html {
+    @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);
+    @include accentize($yellow);
+    font: 14pt/20pt 'Fira Sans', sans-serif;
+}
+
+
+html * {
+    color-profile: sRGB;
+    rendering-intent: auto;
+}
+
+table {
+    margin-top: 2ex;
+    margin-bottom: 2ex;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.devices {
+    font-size: 90%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    border: 1px solid $base0;
+
+    td {
+        border-left: 1px solid $base0;
+        padding: 2px 5px;
+
+        &.numeric {
+            text-align: right;
+        }
+
+        &.check {
+            text-align: center;
+        }
+    }
+
+    thead td {
+        text-align: center;
+        font-weight: bold;
+        border-bottom: 1px solid $base0;
+    }
+
+    tr:nth-child(odd) {background: $base3}
+    tr:nth-child(even) {background: $base2}
+}
+
+.footnote {
+    font-size: 80%;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 10em;
+        top: -.5ex;
+        left: 0;
+        position: absolute;
+        border-bottom: 1px solid black;
+    }
+}
