@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo1.png') }}" />
-    <title>Измерители толщины</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
-</head>
-<body>
-    <div class="container">
-    <h2>Измерители толщины роговичного слоя глаза</h2>
-    <table class="devices">
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+  <h2>Измерители толщины роговичного слоя глаза</h2>
+  <table class="devices">
     <thead>
         <td>Название</td>
         <td>Тип измерения</td>
@@ -34,16 +27,15 @@
         </tr>
     {% endfor %}
     </tbody>
-</table>
-    <!--
-    <p>Таблица сформирована с использованием базы данных <em>тут присвоенный после регистрации номер и всякие плюшки-оформлюшки</em></p>
-    -->
-    <p>
-       &sup1; &mdash; верхний предел измерений<br/>
-       &sup2; &mdash; нижний предел измерений
-    </p>
-    
-    <p><a href="/" title="Узнайте больше о других наших проектах">На главную</a></p>
-    </div>
-</body>
-</html>
+  </table>
+  <!--
+  <p>Таблица сформирована с использованием базы данных <em>тут присвоенный после регистрации номер и всякие плюшки-оформлюшки</em></p>
+  -->
+  <p>
+     &sup1; &mdash; верхний предел измерений<br/>
+     &sup2; &mdash; нижний предел измерений
+  </p>
+  
+  <p><a href="/" title="Узнайте больше о других наших проектах">На главную</a></p>
+</div>
+{% endblock %}
