@@ -1,14 +1,26 @@
 {% extends "layout.html" %}
+
+{% block head %}
+<title>Бугага!</title>
+{% endblock %}
+
 {% block content %}
-  <div class="container"> <!--Название страницы/<title> надо поменять. И добавить дракона из символов в комментариях-->
+  <div class="container"> <!--Добавить дракона из символов в комментариях-->
+    <h1>Бугага!</h1>
+
     <p>Привет!</p>
+
     <p>Мы -- 4 <s>долбаёба</s> слегка самокритичных чувака. У нас есть айфон, сони, самсунг, хтц, блютуз-колонка принглз и несквик-спиннер!</p>
+
     <p>Зацени нашу базу данных и угори с неё: <a href="/shenka">booga.ga/shenka</a></p>
-    <p>Зачем делать этот сайт?</p>
+
+    <h2>Зачем надо было делать этот сайт?</h2>
     <p>Потому что мы можем.</p>
-    <p>Другие наши проекты:</p>
+
+    <h2>Другие наши проекты</h2>
       <dl>
         <dt><a href="https://freecx.github.io" title="Кодим с Лёхой">Кодерный понедельник</a></dt>
+        <dd>Блог о программировании и не только</dd>
         
         <dt><a href="https://github.com/ceilors/book-of-the-idea-out/releases/download/nobody/book_of_the_idea_out.pdf" 
                title="Книжная пародия">Мысли</a></dt>
@@ -18,17 +30,16 @@
         <dd>Лучшие способы потратить своё время <s>с пользой</s>.</dd>
         
         <dt><a href="https://ru.sharelatex.com/project/58285dc0dcf62380011eb003" 
-               title="Математическая ветка">Tony&amp;Johnny</a></dt> <!--Вов, закинь туда статью про Фурье, если осталась.
-                                                                  Если не осталась, то напиши, но всё равно закинь -->
+               title="Математическая ветка">Tony&amp;Johnny</a></dt> <!--Вов, закинь туда статью про Фурье, если осталась. Если не осталась, то напиши, но всё равно закинь -->
         <dd>Немного математических и физических измышлений.</dd>
       </dl>
-    <p>Контакты:</p>
+    <h2>Контакты</h2>
       <ul>
-        <li><a href="https://twitter.com/johnnyabdrams" title="Читайте Вову">twitter-канал</a></li>
+        <li><a href="https://twitter.com/johnnyabdrams">Читайте Вову</a></li>
         
-        <li><a href="https://t.me/aomadhfianais" title="Нечитаемое название">telegram-канал</a></li>
+        <li><a href="https://t.me/aomadhfianais">Внимайте коллективному бессознательному</a></li>
         
-        <li><a href="https://www.youtube.com/channel/UCi4ksAhDSM0yDzUGI1b1DjA" title="Смотрите видосы с Илюхой">youtube-канал</a></li>
+        <li><a href="https://www.youtube.com/channel/UCi4ksAhDSM0yDzUGI1b1DjA">Смотрите Илюху</a></li>
       </ul>
   </div>
 {% endblock %}
