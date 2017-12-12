@@ -10,13 +10,13 @@ conn.row_factory = sqlite3.Row
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", title="Главная")
 
 
 @app.route("/shenka/")
 def db():
     result = conn.execute("select * from Measuring;")
-    return render_template("db.html", result=result)
+    return render_template("db.html", title="Измерители толщины", result=result)
 
 
 if __name__ == "__main__":
