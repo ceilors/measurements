@@ -62,4 +62,10 @@ table {
     position: absolute;
     border-bottom: 1px solid black; }
 
+h3.status {
+  color: silver;
+  font-weight: bold;
+  text-decoration: blink;
+  font-family: cirsive;
+}
 /*# sourceMappingURL=main.css.map */
