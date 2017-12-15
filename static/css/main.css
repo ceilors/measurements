@@ -25,7 +25,9 @@ html * {
   color: silver;
   font-weight: bold;
   text-decoration: blink;
-  font-family: cursive; }
+  font-family: cursive;
+  font-style: oblique;
+  font-size: 75%; }
 
 table {
   margin-top: 2ex;
@@ -46,6 +48,8 @@ table {
     .devices td.numeric {
       text-align: right;
       white-space: pre; }
+    .devices td.check {
+      text-align: center; }
     .devices td:first-child {
       white-space: pre; }
   .devices thead td {
