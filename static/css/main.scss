@@ -44,6 +44,14 @@ html * {
     rendering-intent: auto;
 }
 
+.status {
+    color: silver;
+    font-weight: bold;
+    text-decoration: blink;
+    font-family: cursive;
+    font-size: 75%;
+}
+
 table {
     margin-top: 2ex;
     margin-bottom: 2ex;
@@ -66,10 +74,15 @@ table {
 
         &.numeric {
             text-align: right;
+            white-space: pre;
         }
 
         &.check {
             text-align: center;
+        }
+
+        &:first-child {
+            white-space: pre;
         }
     }
 
