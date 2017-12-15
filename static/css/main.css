@@ -21,6 +21,12 @@ html * {
   color-profile: sRGB;
   rendering-intent: auto; }
 
+.status {
+  color: silver;
+  font-weight: bold;
+  text-decoration: blink;
+  font-family: cursive; }
+
 table {
   margin-top: 2ex;
   margin-bottom: 2ex; }
@@ -38,9 +44,10 @@ table {
     border-left: 1px solid #839496;
     padding: 2px 5px; }
     .devices td.numeric {
-      text-align: right; }
-    .devices td.check {
-      text-align: center; }
+      text-align: right;
+      white-space: pre; }
+    .devices td:first-child {
+      white-space: pre; }
   .devices thead td {
     text-align: center;
     font-weight: bold;
@@ -62,10 +69,4 @@ table {
     position: absolute;
     border-bottom: 1px solid black; }
 
-h3.status {
-  color: silver;
-  font-weight: bold;
-  text-decoration: blink;
-  font-family: cirsive;
-}
 /*# sourceMappingURL=main.css.map */
