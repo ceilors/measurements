@@ -97,3 +97,29 @@ table {
         border-bottom: 1px solid black;
     }
 }
+
+.inline-link-3 {
+    display: inline-block;
+    position: relative;
+    padding-left: 6px;
+    /* Font styles */
+    text-decoration: none;
+    color: #6AB3EC;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.9);
+}
+ 
+.inline-link-3:hover {
+    color: #3C9CE7;
+}
+ 
+.inline-link-3:before {
+    content: "\25BA";
+    font-size: 80%;
+    display: inline-block;
+    padding-right: 3px;
+    pointer-events: none;
+}
+ 
+.inline-link-3:hover:before {
+    color: #F2BF97;
+}
