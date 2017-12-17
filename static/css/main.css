@@ -13,21 +13,25 @@ html {
   html a, html a:active, html a:visited {
     color: #586e75; }
   html a, html a:active, html a:visited, html code.url {
-    color: #b58900; }
-  html h1, html h2, html h3, html h4, html h5, html h6 {
-    color: #b58900; }
+    color: #268bd2; }
+  html a:hover {
+    color: #4ca2df; }
 
 html * {
   color-profile: sRGB;
   rendering-intent: auto; }
 
-.status {
-  color: silver;
-  font-weight: bold;
-  text-decoration: blink;
-  font-family: cursive;
-  font-style: oblique;
-  font-size: 75%; }
+blockquote {
+  display: inline-block;
+  background: white;
+  border-left: 3px solid #d33682;
+  margin: 0;
+  padding: 0.5ex 3em;
+  font-style: italic;
+  min-width: 25%; }
+  blockquote > .author {
+    display: block;
+    text-align: right; }
 
 table {
   margin-top: 2ex;
@@ -35,7 +39,8 @@ table {
 
 .container {
   max-width: 1024px;
-  margin: 0 auto; }
+  margin-left: auto;
+  margin-right: auto; }
 
 .devices {
   font-size: 90%;
@@ -72,5 +77,19 @@ table {
     left: 0;
     position: absolute;
     border-bottom: 1px solid black; }
+
+.arrowed {
+  text-decoration: none; }
+  .arrowed:before {
+    content: "\25BA"; }
+
+footer {
+  text-align: center;
+  padding: 5ex 0 0;
+  margin-top: 5ex;
+  border-top: 1px solid #93a1a1;
+  font-size: 75%;
+  color: #657b83;
+  line-height: 1.5; }
 
 /*# sourceMappingURL=main.css.map */
