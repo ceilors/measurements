@@ -16,7 +16,7 @@ $blue:      #268bd2;
 $cyan:      #2aa198;
 $green:     #859900;
 
-@mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) 
+@mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3)
 {
     background-color:$rebase03;
     color:$rebase0;
@@ -27,14 +27,14 @@ $green:     #859900;
 
 @mixin accentize($accent) {
     a, a:active, a:visited, code.url { color: $accent; }
-    h1,h2,h3,h4,h5,h6 {color:$accent}
+    a:hover { color: lighten($accent, 10%); }
 }
 
 /*    Solarized ****/
 
 html {
     @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);
-    @include accentize($yellow);
+    @include accentize($blue);
     font: 14pt/20pt 'Fira Sans', sans-serif;
 }
 
@@ -44,12 +44,19 @@ html * {
     rendering-intent: auto;
 }
 
-.status {
-    color: silver;
-    font-weight: bold;
-    text-decoration: blink;
-    font-family: cursive;
-    font-size: 75%;
+blockquote {
+    display: inline-block;
+    background: white;
+    border-left: 3px solid $magenta;
+    margin: 0;
+    padding: 0.5ex 3em;
+    font-style: italic;
+    min-width: 25%;
+
+    &>.author {
+        display: block;
+        text-align: right;
+    }
 }
 
 table {
@@ -59,7 +66,8 @@ table {
 
 .container {
     max-width: 1024px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .devices {
@@ -109,4 +117,22 @@ table {
         position: absolute;
         border-bottom: 1px solid black;
     }
+}
+
+.arrowed {
+    text-decoration: none;
+
+    &:before {
+        content: "\25BA";
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 5ex 0 0;
+    margin-top: 5ex;
+    border-top: 1px solid $base1;
+    font-size: 75%;
+    color: $base00;
+    line-height: 1.5;
 }
