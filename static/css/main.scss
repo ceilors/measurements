@@ -36,6 +36,11 @@ html {
     @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);
     @include accentize($yellow);
     font: 14pt/20pt 'Fira Sans', sans-serif;
+    height: 101%; /*Когда содержимое страницы не заполняет всю высоту окна браузера,
+    никакие полосы прокрутки вам не нужны. Однако изменение его размеров заставит их 
+    появиться и добавить лишние 10-15 px к ширине окна, вытесняя контент страницы. 
+    Данный отрывок кода гарантирует, что элемент HTML всегда окажется чуть выше браузера,
+    что заставит полосы прокрутки оставаться на месте.*/
 }
 
 
@@ -109,4 +114,30 @@ table {
         position: absolute;
         border-bottom: 1px solid black;
     }
+}
+
+.inline-link-3 {
+    display: inline-block;
+    position: relative;
+    padding-left: 6px;
+    /* Font styles */
+    text-decoration: none;
+    color: #6AB3EC;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.9);
+}
+ 
+.inline-link-3:hover {
+    color: #3C9CE7;
+}
+ 
+.inline-link-3:before {
+    content: "\25BA";
+    font-size: 80%;
+    display: inline-block;
+    padding-right: 3px;
+    pointer-events: none;
+}
+ 
+.inline-link-3:hover:before {
+    color: #F2BF97;
 }
