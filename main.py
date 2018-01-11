@@ -1,5 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, abort
 import sqlite3
+import markdown
+import os
 
 
 app = Flask(__name__, static_url_path='')
@@ -17,6 +19,16 @@ def index():
 def db():
     result = conn.execute("select * from Measuring;")
     return render_template("db.html", title="Измерители толщины", result=result)
+
+
+@app.route("/blog/<int:year>/<int:month>/<int:day>/<title>")
+def blog(year, month, day, title):
+    fname = "blog/%04d-%02d-%02d-%s.md" % (year, month, day, title)
+    if not os.path.exists(fname):
+        abort(404)
+    with open(fname) as f:
+        md = f.read()
+    return markdown.markdown(md)
 
 
 if __name__ == "__main__":
