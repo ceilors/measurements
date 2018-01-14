@@ -1,4 +1,5 @@
 from flask import Flask, render_template, abort
+from werkzeug import secure_filename
 import sqlite3
 import markdown
 import os
@@ -23,12 +24,11 @@ def db():
 
 @app.route("/blog/<int:year>/<int:month>/<int:day>/<title>")
 def blog(year, month, day, title):
-    fname = "blog/%04d-%02d-%02d-%s.md" % (year, month, day, title)
+    # написать нормальный код для загрузки файла
+    fname = 'blog/' + secure_filename('{:04d}-{:02d}-{:02d}-{}.md'.format(year, month, day, title))
     if not os.path.exists(fname):
         abort(404)
-    with open(fname) as f:
-        md = f.read()
-    return markdown.markdown(md)
+    return markdown.markdown(open(fname).read())
 
 
 if __name__ == "__main__":
