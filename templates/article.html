@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<title>Статья типа</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  {{ article | safe }}
+</div>
+{% endblock %}

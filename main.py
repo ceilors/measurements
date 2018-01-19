@@ -28,7 +28,8 @@ def blog(year, month, day, title):
     fname = 'blog/' + secure_filename('{:04d}-{:02d}-{:02d}-{}.md'.format(year, month, day, title))
     if not os.path.exists(fname):
         abort(404)
-    return markdown.markdown(open(fname).read())
+    article = markdown.markdown(open(fname).read())
+    return render_template("article.html", article=article)
 
 
 if __name__ == "__main__":
